@@ -20,7 +20,7 @@ function App() {
 
 // Fetch Task
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`)
+    const res = await fetch(`http://localhost:8001/tasks/${id}`)
     const data = await res.json()
     return data
   }
@@ -28,14 +28,14 @@ function App() {
 
 // Fetch Tasks
 const fetchTasks = async () => {
-  const res = await fetch('http://localhost:5000/tasks')
+  const res = await fetch('http://localhost:8001/tasks')
   const data = await res.json()
   return data
 }
 
 // Add Task
 const addTask = async (task) => {
-  const res = await fetch('http://localhost:5000/tasks', {
+  const res = await fetch('http://localhost:8001/tasks', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json'
@@ -47,12 +47,13 @@ const addTask = async (task) => {
   // const id = Math.floor(Math.random() * 10000) + 1
   // const newTask = { id, ...task }
   // setTasks([...tasks, newTask])
+  // not sure why this is commented out
 }
 
 
 // Delete Task
 const deleteTask = async (id) => {
-  await fetch(`http://localhost:5000/tasks/${id}`, {
+  await fetch(`http://localhost:8001/tasks/${id}`, {
     method: 'DELETE',
   })
   setTasks(tasks.filter((task) => task.id !== id))
@@ -63,7 +64,7 @@ const toggleReminder = async (id) => {
   const taskToToggle = await fetchTask(id)
   const updTask = {...taskToToggle, reminder: !taskToToggle.reminder }
 
-  const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+  const res = await fetch(`http://localhost:8001/tasks/${id}`, {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json'
@@ -97,33 +98,3 @@ const toggleReminder = async (id) => {
 }
 
 export default App;
-
-// Using Routers
-
-// This functionality is broken or outdated. To see the tutorial for this
-//project go to https://www.youtube.com/watch?v=w7ejDZ8SWv8
-// YouTube video 'ReactJS Crash Course' by Traversy Media
-
-// <Router>
-//       <div className='container'>
-//         <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-//         <Route path='/' exact render={(props) => (
-//           <>
-//             {showAddTask && <AddTask onAdd={addTask} />}
-//             {tasks.length > 0 ? (<Tasks 
-//             tasks={tasks} 
-//             onDelete={deleteTask}
-//             onToggle={toggleReminder}
-//             />) : ( 'No tasks to show')}
-//           </>
-//         )}
-//         />
-//         <Route path='/about' component={About}/>
-//         <Footer />
-//       </div>
-//     </Router>
-
-
-//To run this project on a local host, open a local 
-//(in this directory using code .) 
-//terminal and use npm run start

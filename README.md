@@ -69,3 +69,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # TaskTracker
+
+Tutorial source
+https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=2580s
+video title: React JS Crash Course
+
+server on both described below
+can use npm run start or npm run build
+
+npm run build
+
+running on a server instead of local
+install server
+$ sudo -S npm i -g serve
+
+$ npm run build
+
+build server from build folder on port 8000
+$ serve -s build -p 8000
+
+to use the .json server use
+$ npm run server
+open new terminal and run 
+$ npm run start
+
+This will run on localhost 3000 using the db.json file, updating it in real
+time when changes are made to the website

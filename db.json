@@ -1,16 +1,22 @@
 {
   "tasks": [
     {
-      "text": "Touch Self Inappropriately",
-      "day": "Literally Constantly",
+      "text": "task 1",
+      "day": "today",
       "reminder": true,
       "id": 5
     },
     {
-      "text": "do the thing",
-      "day": "juulee",
+      "text": "task 2",
+      "day": "tomorrow",
       "reminder": true,
       "id": 6
+    },
+    {
+      "text": "task 3",
+      "day": "tomorrow",
+      "reminder": false,
+      "id": 7
     }
   ]
 }

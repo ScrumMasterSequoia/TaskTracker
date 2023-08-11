@@ -5,10 +5,12 @@ const Header = ({title, onAdd, showAdd}) => {
   return (
     <header className='header'>
         <h1>{title}</h1>
+        <h6> *double click item to toggle reminder</h6>
         <Button 
         color={showAdd ? 'red' : 'green'}
         text={showAdd ? 'Close' : 'Add'} 
         onClick={onAdd}/>
+        
     </header>
   )
 }

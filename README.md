@@ -104,6 +104,7 @@ time when changes are made to the website
 
 
 
+This project creates a series of buttons and containers, with input fields so that the user can fill out a simple form and create to-do tasks, update them, delete them and flip their toggleReminder boolean. In all cases, the buttons have full functionality. The next step for making this project better would be to add persistent data logging and a backend so that the users could log in to their account and still have access to the to-do list they have made. Also implementing logic for the set reminders would be nice. as of now it just flips a visual flag.
 
 The react App component uses UseState to instantiate and manipulate the states of this app. When executed, the app returns DOM components with default parameters.
 - set the state to showing new tasks added in the list,

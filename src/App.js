@@ -14,8 +14,6 @@ const addTask = (task) => {
     setTasks([...tasks, newTask])
   }
 
-
-
 // Delete Task
 const deleteTask =  (id) => {
   setTasks(tasks.filter((task) => task.id !== id))

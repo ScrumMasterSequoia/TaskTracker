@@ -70,6 +70,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # TaskTracker
 
+
+
+
+
+
+
 Tutorial source
 https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=2580s
 video title: React JS Crash Course
@@ -95,3 +101,21 @@ $ npm run start
 
 This will run on localhost 3000 using the db.json file, updating it in real
 time when changes are made to the website
+
+
+
+
+The react App component uses UseState to instantiate and manipulate the states of this app. When executed, the app returns DOM components with default parameters.
+- set the state to showing new tasks added in the list,
+- flipping the boolean state for showAddTask
+- creates the Task component which has default methods such as 
+ - tasks={tasks} 
+ - onDelete={deleteTask}
+ - onToggle={toggleReminder}
+ - and sets the default text to 'no tasks to show' if tasks.length is not greater   than zero (there are no tasks)
+
+ The most interesting aspect of this project to me, is the ability to create instances of this task component which have identical methods, but each method only corresponds with the task that shares an ID with it. so each task will be able to update state without affecting the others or being effected by others during state change.
+
+ Then, everything is rendered by index.js so that the styles referenced therein can by applied by index.css. 
+
+ reportwebvitals can be removed. Its part of the default React Boilerplate stuff.
